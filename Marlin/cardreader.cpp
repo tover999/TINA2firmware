@@ -168,7 +168,7 @@ void CardReader::lsDive(const char *prepend, SdFile parent, const char * const m
 void CardReader::lsRoot(OutPacket* outp)
 {
 	dir_t p;
-	uint8_t cnt = 0;
+//	uint8_t cnt = 0;
 	SdFile parent = root;
 	root.rewind();
 
@@ -440,7 +440,7 @@ bool CardReader::openFile(char * const path, const bool read, const bool subcall
 
   SdFile *curDir;
   const char * const fname = diveToFile(curDir, path, false);
-  if (!fname) return;
+  if (!fname) return false;
 
   if (read) {
     if (file.open(curDir, fname, O_READ)) {

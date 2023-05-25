@@ -32,7 +32,9 @@
 
 #define en 1234
 #if LCD_LANGUAGE == en
-  #define NOT_EXTENDED_ISO10646_1_5X7
+  #ifndef NOT_EXTENDED_ISO10646_1_5X7
+    #define NOT_EXTENDED_ISO10646_1_5X7
+  #endif
 #endif
 #undef en
 

@@ -839,7 +839,7 @@ const char MMSG_FILAMENT_CHANGE_INIT_1[12][20] PROGMEM = {
 	"\xfc\xfd\xb3\xb4     ",			// 等待开始	
 	"Attendez debut",
 	"Warte auf den",
-	"Espere a que comience",
+	"Espere a comience",
 	"Attendere avvio",
 	"\xba\xb3\xb6\xdd\xa6\xb6\xb2\xbc\xbc\xcf\xbd",
 	"Aguarde o inicio",
@@ -942,7 +942,7 @@ const char MMSG_FILAMENT_CHANGE_INSERT_1[12][27] PROGMEM = {
 const char MMSG_FILAMENT_CHANGE_INSERT_2[12][20] PROGMEM = {
 	"and press button",
 	"\x8d\x8e\x8f\xf4\xf5       ",			// 并按键	
-	"et presser le bouton",
+	"et presser le bou",
 	"und Knopf",
 	"y presione el boton",
 	"filamento e",
@@ -1715,7 +1715,7 @@ const char MMSG_RESTORE_PRINT[12][24] PROGMEM = {
 	"Curriculo...",
 	"Doorgaan met...",
 	"Surdurme ...",
-	"\xdd\x84\...",				
+	"\xdd\x84 ..",				
 	"Резюмируя ...",
 };
 

@@ -5882,7 +5882,7 @@ void wt_sdcard_showpage()
 	if (wtvar_sdcard_filecount > 0 && wtvar_sdcard_pageid < wtvar_sdcard_pagecount)
 	{
 		uint8_t i, endpos;
-		if (wtvar_sdcard_filecount >= ((wtvar_sdcard_pageid + 1) * SDCARD_MENU_PAGE_ITEMS))
+		if (wtvar_sdcard_filecount >= ((wtvar_sdcard_pageid + 1U) * (unsigned int) SDCARD_MENU_PAGE_ITEMS))
 		{	// has 6 items
 			endpos = (wtvar_sdcard_pageid + 1) * SDCARD_MENU_PAGE_ITEMS;
 		}

@@ -965,7 +965,10 @@ inline void get_serial_commands() {
   /**
    * Loop while serial characters are incoming and the queue is not full
    */
-  int c0,c3;
+  int c0; // queue has space
+#ifdef WIFI_ENABLE
+  int c3; //serial has data
+#endif 
 
   uint8_t serial_char;
 
@@ -9064,7 +9067,8 @@ inline void gcode_M115() {
 inline void gcode_M117() {
 	if (parser.string_arg[0])
 	{	
-		int ret = extractFront(parser.string_arg, "Progress=", parsedString);
+		char temp[10] = "Progress=";
+		int ret = extractFront(parser.string_arg, temp, parsedString);
 		if (ret)
 		{
 			progress_bar_percent = atoi(parsedString);
@@ -13987,7 +13991,7 @@ void setup() {
 	{
 		wtvar_gohome = 0;
 		(void)settings.save();
-		enqueue_and_echo_commands_P(PSTR("G28 Z F300\r\n\M18"));
+		enqueue_and_echo_commands_P(PSTR("G28 Z F300\r\nM18"));
 #if ENABLED(POWER_LOSS_RECOVERY)
 		card.removeJobRecoveryFile();
 #endif

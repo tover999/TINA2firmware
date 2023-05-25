@@ -90,7 +90,7 @@
 #ifndef NOT_EXTENDED_ISO10646_1_5X7
 #define NOT_EXTENDED_ISO10646_1_5X7
 #endif
-#include "dogm_font_data_ISO10646_1.h"
+//#include "dogm_font_data_ISO10646_1.h"
 
 #ifndef DISPLAY_CHARSET_ISO10646_CN
 #define DISPLAY_CHARSET_ISO10646_CN

@@ -499,7 +499,7 @@ uint8_t wt_get_hostmode(void)
 	if (wt_hostmode_init == 0)
 	{	
 		wt_hostmode_init = 1;
-		wt_hostmode = eeprom_read_byte(EEPROM_HOST_MODE);
+		wt_hostmode = eeprom_read_byte((const uint8_t *) EEPROM_HOST_MODE);
 		if (wt_hostmode > 1) wt_hostmode = HOST_WIIBUILDER;
 	}
 
@@ -511,7 +511,7 @@ void wt_set_hostmode(const uint8_t mode)
 	if (mode != wt_hostmode)
 	{
 		wt_hostmode = mode;
-		eeprom_write_byte(EEPROM_HOST_MODE, wt_hostmode);
+		eeprom_write_byte((uint8_t *) EEPROM_HOST_MODE, wt_hostmode);
 		wt_restart();
 	}
 }

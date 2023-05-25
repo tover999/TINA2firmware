@@ -347,7 +347,7 @@ void InPacket::Process_GCode(void)
 	outp->appendByte('G');
 	if (commands_in_queue < BUFSIZE)
 	{
-		_enqueuecommand(&payload[1], false);
+		_enqueuecommand((const char*) &payload[1], false);
 		outp->appendByte(0x30);
 	}
 	else
