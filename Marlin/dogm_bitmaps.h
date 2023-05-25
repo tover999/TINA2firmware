@@ -145,7 +145,7 @@
 
   #if HAS_HEATED_BED
 
-    #define STATUS_SCREEN_X        (  8 + (HOTENDS ? 0 : 64))
+    #define STATUS_SCREEN_X        (  0 + (HOTENDS ? 0 : 64))
     #define STATUS_SCREENWIDTH     (120 - (HOTENDS ? 0 : 64))
 
     #if HOTENDS == 0
